@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href=/public/favicon.png>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="<%- staticFile('/public/img/favicon.png')%>">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
     <title>丹东科环集成墙板有限公司-<%- block('title').toString() %></title>
     <meta name="keywords" content="<%- block('keywords').toString() %>">
     <meta name="description" content="<%- block('description').toString() %>">
 
     <link rel="stylesheet" href="<%- staticFile('/public/bootstrap/dist/css/bootstrap.min.css')%>">
+    <link rel="stylesheet" href="<%- staticFile('/public/css/index.css')%>">
+    <link rel="stylesheet" href="<%- staticFile('/public/Swiper-3.4.1/dist/css/swiper.min.css')%>">
     <%- block('head').toString() %>
 </head>
 <body>
+<% include ./header.html %>
 <%- body %>
 <script src="<%- staticFile('/public/jquery/dist/jquery.min.js')%>"></script>
 <script src="<%- staticFile('/public/bootstrap/dist/js/bootstrap.min.js')%>"></script>
+<script src="<%- staticFile('/public/js/common.min.js')%>"></script>
+<script src="<%- staticFile('/public/Swiper-3.4.1/dist/js/swiper.min.js')%>"></script>
 <%- block('footer').toString() %>
 </body>
 </html>

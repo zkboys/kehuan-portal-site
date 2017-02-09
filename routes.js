@@ -15,14 +15,13 @@ const mpUser = require('./controller/mp_user');
 const merchant = require('./controller/merchant');
 
 router.get('/', function (req, res) {
-    res.render('index', {message: 'I am Index Page!'});
+    res.render('home', {message: 'I am Index Page!'});
 });
 
 
 router.get('/about', function (req, res) {
     res.render('about', {message: 'I am About Page!'});
 });
-
 
 
 router.get('/signin', function (req, res) {

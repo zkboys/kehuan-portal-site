@@ -1,0 +1,237 @@
+<div class="home-banner">
+    <header>
+        <div class="header-swipers">
+            <div class="swiper-container header-swiper-back-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="swiper-container header-swiper-back-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="swiper-container header-swiper-front">
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="logo"></div>
+                        <div class="titles">
+                            <h1 class="title">Swiper111111111</h1>
+                            <h2 class="subtitle">Most Modern Mobile Touch Slider</h2>
+                            <div class="by"><a href="http://www.idangero.us">by iDangero.us</a></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="release-info">MIT Licensed, v3.4.1 released on December 17, 2016 | <a
+                                href="https://github.com/nolimits4web/Swiper/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
+                        </div>
+                        <div class="links"><a
+                                href="https://github.com/nolimits4web/Swiper/archive/v3.4.1.zip">Download</a><a
+                                href="./get-started/">Get Started</a><a href="./api/">API</a><a
+                                href="./demos/">Demos</a><a href="./forum/">Forum</a></div>
+                        <div class="github-buttons">
+                            <iframe class="github-btn"
+                                    src="http://ghbtns.com/github-btn.html?user=nolimits4web&repo=swiper&type=watch&count=true"
+                                    width="100" height="20"></iframe>
+                            <iframe class="github-btn"
+                                    src="http://ghbtns.com/github-btn.html?user=nolimits4web&repo=swiper&type=fork&count=true"
+                                    width="100" height="20"></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-title">Top Notch Features</div>
+                        <ul class="slide-features-list">
+                            <li>Library Agnostic</li>
+                            <li>Mutation Observer</li>
+                            <li>Flexbox Layout</li>
+                            <li>Full True RTL Support</li>
+                            <li>Multi Row Slides Layout</li>
+                            <li>3D Effects</li>
+                            <li>Two-way Control</li>
+                            <li>Full Navigation Control</li>
+                            <li>Reach API</li>
+                            <li>Most Flexible Slides Layout Grid</li>
+                            <li>Parallax Transitions</li>
+                            <li>Images Lazy Loading</li>
+                            <li>And many more ...</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide swiper-slide-gallery">
+                        <div class="swiper-container swiper-gallery-top">
+                            <div class="slide-title demo-iframe-title">Build Complex Touch Galleries</div>
+                            <div class="swiper-wrapper">
+                                <div data-background="http://lorempixel.com/1200/600/nature/1"
+                                     class="swiper-slide swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                                <div data-background="http://lorempixel.com/1200/600/nature/2"
+                                     class="swiper-slide swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                                <div data-background="http://lorempixel.com/1200/600/nature/3"
+                                     class="swiper-slide swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                                <div data-background="http://lorempixel.com/1200/600/nature/4"
+                                     class="swiper-slide swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                                <div data-background="http://lorempixel.com/1200/600/nature/5"
+                                     class="swiper-slide swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-container swiper-gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div style="background-image:url(http://lorempixel.com/300/200/nature/1)"
+                                     class="swiper-slide"></div>
+                                <div style="background-image:url(http://lorempixel.com/300/200/nature/2)"
+                                     class="swiper-slide"></div>
+                                <div style="background-image:url(http://lorempixel.com/300/200/nature/3)"
+                                     class="swiper-slide"></div>
+                                <div style="background-image:url(http://lorempixel.com/300/200/nature/4)"
+                                     class="swiper-slide"></div>
+                                <div style="background-image:url(http://lorempixel.com/300/200/nature/5)"
+                                     class="swiper-slide"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide last-centered-slide">
+                        <div class="slide-title">Start Using It Now</div>
+                        <div class="slide-subtitle">Swiper is completely free and open-source</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<% block('footer').append(`
+<script>
+
+    ;
+    (function () {
+        function lazyLoadImages() {
+            var st = $(window).scrollTop();
+            $('img.lazy').each(function () {
+                var img = $(this);
+                if (img.attr('src'))return;
+                if (img.offset().top < $(window).height() + st) {
+                    img.attr('src', img.data('src'));
+                }
+            });
+        }
+
+        if ($('img.lazy').length > 0) {
+            $(window).scroll(function () {
+                lazyLoadImages();
+            });
+        }
+        if (window.hljs) {
+            hljs.configure({tabReplace: '    '});
+            hljs.initHighlightingOnLoad();
+        }
+        var loop = true;
+        var swiperBack2 = new Swiper('.header-swiper-back-2', {
+            loop: loop,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 100,
+            onlyExternal: true,
+            effect: 'coverflow',
+            direction: 'vertical',
+            speed: 600,
+            coverflow: {slideShadows: false}
+        });
+        var swiperBack1 = new Swiper('.header-swiper-back-1', {
+            loop: loop,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 300,
+            effect: 'coverflow',
+            speed: 600,
+            coverflow: {slideShadows: false}
+        });
+        var swiperFront = new Swiper('.header-swiper-front', {
+            autoplay: 3000,
+            loop: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 100,
+            effect: 'coverflow',
+            speed: 600,
+            coverflow: {slideShadows: false},
+            pagination: '.header-swiper-front .swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.header-swiper-front .swiper-button-next',
+            prevButton: '.header-swiper-front .swiper-button-prev',
+            control: [swiperBack1, swiperBack2],
+            controlBy: 'container',
+            keyboardControl: true,
+            a11y: true,
+            onSlideChangeStart: function (s) {
+                if (s.activeIndex === $('.swiper-slide-gallery').index()) {
+                    $(s.container[0]).find('.swiper-pagination').hide();
+                }
+                else {
+                    $(s.container[0]).find('.swiper-pagination').show();
+                }
+            }
+        });
+        var galleryTopSwiper = new Swiper('.swiper-gallery-top', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            nested: true,
+            resistanceRatio: 0,
+            preloadImages: false,
+            lazyLoading: true,
+        });
+        var galleryThumbsSwiper = new Swiper('.swiper-gallery-thumbs', {
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 10,
+            centeredSlides: true,
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            nested: true,
+            resistanceRatio: 0,
+        });
+        galleryTopSwiper.control = galleryThumbsSwiper;
+        galleryThumbsSwiper.control = galleryTopSwiper;
+        function lazyLoadDemos() {
+            $('.demo').each(function () {
+                var frameHolder = $(this).find('.demo-iframe');
+                if (frameHolder.hasClass('loaded'))return;
+                var frame = frameHolder.find('iframe');
+                var src = frame.attr('data-src');
+                if (frameHolder.offset().top < ($(window).scrollTop() + $(window).height() + 50)) {
+                    frameHolder.addClass('loaded');
+                    frame.attr('src', src);
+                }
+            });
+        }
+
+        if ($('.demo').length > 0) {
+            $('.demo').each(function () {
+                var t = $(this);
+                var demoFile = t.find('iframe').attr('data-src');
+                t.find('.demo-link-new-window').attr('href', demoFile);
+                t.find('.demo-link-source').attr('href', 'https://github.com/nolimits4web/Swiper/blob/master/demos/' + demoFile);
+            });
+            $(window).on('scroll resize', function () {
+                lazyLoadDemos();
+            });
+            lazyLoadDemos();
+        }
+    })();
+</script>
+`) %>
