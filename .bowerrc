@@ -1,4 +1,4 @@
 {
-  "directory": "plugins",
+  "directory": "public",
   "timeout": 120000
 }

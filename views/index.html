@@ -1,0 +1,16 @@
+<% block('title').append('首页') %>
+<% block('keywords').append('建材,集成,墙板') %>
+<% block('description').append('首页测试描述啥的') %>
+<% block('head').append(`<link type="text/css" href="/foo.css">`) %>
+
+<H1>index</H1>
+<p><%= message%></p>
+
+<button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+</button>
+<a href="/about">to about</a>
+<% block('footer').append(`
+<script>
+</script>
+`) %>

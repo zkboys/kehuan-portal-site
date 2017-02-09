@@ -1,0 +1,15 @@
+<% block('title').append('关于') %>
+<% block('keywords').append('建材,集成,墙板') %>
+<% block('description').append('首页测试描述啥的') %>
+<% block('head').append(`<link type="text/css" href="/foo.css">`) %>
+
+<H1>about</H1>
+<p><%= message%></p>
+<a href="/about">to about</a>
+<% block('footer').append(`
+<script>
+    $(function(){
+        console.log('block 要使用反引号，否则不能换行');
+    });
+</script>
+`) %>

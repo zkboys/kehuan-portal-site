@@ -1,10 +1,27 @@
+# Created by .ignore support plugin (hsz.mobi)
+output
+.cov
+coverage
+node_modules
+.naeindex
+coverage.html
+.monitor
+
+#*.min.*.js
+#*.min.*.css
+#assets.json
+
+# Ignore Mac OS desktop services store
 .DS_Store
-node_modules/
-dist/
-npm-debug.log
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
+
+# Ignore Windows desktop setting file
+desktop.ini
+
+*.log
+
 .idea
-src/themes/current
-src/all-routes.js
+public/upload/*
+assets/src/page/AllRoutes.js
+*.sublime-project
+*.sublime-workspace
+*.swp
