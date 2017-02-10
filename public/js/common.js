@@ -22,10 +22,20 @@ $(function () {
     //导航栏滑动一定距离添加白底
     var scrollFunc = function (e) {
         e = e || window.event;
-        if ($(window).scrollTop() > 250) {
-            $(".nav").addClass('nav-change-color');
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 250) {
+            // background-color: rgba(0, 0, 0, .5);
+            // $(".nav").addClass('nav-change-color');
+            $('.nav').css('background-color', 'rgba(0, 0, 0, 0.5)');
         } else {
-            $(".nav").removeClass('nav-change-color');
+
+            // $(".nav").removeClass('nav-change-color');
+            var n = scrollTop / 500;
+            if (n < 0.1) {
+                n = 0.1
+            }
+            $('.nav').css('background-color', 'rgba(0, 0, 0, ' + n + ')');
         }
     };
     //给页面绑定滑轮滚动事件

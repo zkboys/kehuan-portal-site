@@ -1,12 +1,14 @@
+@bannerBgColor: #2f8005;
+@bannerBgColorLight: #488062;
 .home-banner {
   padding-top: 100px;
-  background: #1e70cd;
-  background: -moz-radial-gradient(50% 50%, circle cover, #2c8dfb 0%, #1e70cd 100%);
-  background: -webkit-gradient(radial, 50% 50%, 0px, center center, 100%, color-stop(0%, #2c8dfb), color-stop(100%, #1e70cd));
-  background: -webkit-radial-gradient(0% 0%, circle cover, #2c8dfb 0%, #1e70cd 100%);
-  background: -o-radial-gradient(50% 50%, circle cover, #2c8dfb 0%, #1e70cd 100%);
-  background: -ms-radial-gradient(50% 50%, circle cover, #2c8dfb 0%, #1e70cd 100%);
-  background: radial-gradient(circle at 50% 50%, #2c8dfb 0%, #1e70cd 100%);
+  background: @bannerBgColor;
+  background: -moz-radial-gradient(50% 50%, circle cover, @bannerBgColorLight 0%, @bannerBgColor 100%);
+  background: -webkit-gradient(radial, 50% 50%, 0px, center center, 100%, color-stop(0%, @bannerBgColorLight), color-stop(100%, @bannerBgColor));
+  background: -webkit-radial-gradient(0% 0%, circle cover, @bannerBgColorLight 0%, @bannerBgColor 100%);
+  background: -o-radial-gradient(50% 50%, circle cover, @bannerBgColorLight 0%, @bannerBgColor 100%);
+  background: -ms-radial-gradient(50% 50%, circle cover, @bannerBgColorLight 0%, @bannerBgColor 100%);
+  background: radial-gradient(circle at 50% 50%, @bannerBgColorLight 0%, @bannerBgColor 100%);
   header {
     //background: #1e70cd;
     //background: -moz-radial-gradient(50% 50%, circle cover, #2c8dfb 0%, #1e70cd 100%);

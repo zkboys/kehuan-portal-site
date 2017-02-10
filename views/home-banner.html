@@ -162,7 +162,7 @@
         });
         var swiperFront = new Swiper('.header-swiper-front', {
             autoplay: 3000,
-            loop: true,
+            loop: loop,
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 100,
@@ -187,16 +187,15 @@
             }
         });
         var galleryTopSwiper = new Swiper('.swiper-gallery-top', {
-            loop: true,
             slidesPerView: 1,
             spaceBetween: 10,
             nested: true,
             resistanceRatio: 0,
             preloadImages: false,
             lazyLoading: true,
+            control: galleryThumbsSwiper,
         });
         var galleryThumbsSwiper = new Swiper('.swiper-gallery-thumbs', {
-            loop: true,
             slidesPerView: 5,
             spaceBetween: 10,
             centeredSlides: true,
@@ -204,9 +203,8 @@
             slideToClickedSlide: true,
             nested: true,
             resistanceRatio: 0,
+            control: galleryTopSwiper,
         });
-        galleryTopSwiper.control = galleryThumbsSwiper;
-        galleryThumbsSwiper.control = galleryTopSwiper;
         function lazyLoadDemos() {
             $('.demo').each(function () {
                 var frameHolder = $(this).find('.demo-iframe');

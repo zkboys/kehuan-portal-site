@@ -30,10 +30,10 @@
 }
 .header .brand {
   display: inline-block;
-  padding: 20px 0;
+  padding: 5px 0;
 }
 .header .brand img {
-  height: 60px;
+  height: 90px;
   width: auto;
   vertical-align: middle;
 }
@@ -148,10 +148,11 @@
     background: rgba(0, 0, 0, 0.7);
   }
   .header .brand {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 0;
   }
   .header .brand img {
-    height: 40px;
+    height: 50px;
   }
   .header .nav-menu {
     float: inherit;
@@ -192,11 +193,11 @@
 }
 .home-banner {
   padding-top: 100px;
-  background: #1e70cd;
-  background: -webkit-gradient(radial, 50% 50%, 0px, center center, 100%, color-stop(0%, #2c8dfb), color-stop(100%, #1e70cd));
-  background: -webkit-radial-gradient(0% 0%, circle cover, #2c8dfb 0%, #1e70cd 100%);
-  background: -webkit-radial-gradient(50% 50%, circle, #2c8dfb 0%, #1e70cd 100%);
-  background: radial-gradient(circle at 50% 50%, #2c8dfb 0%, #1e70cd 100%);
+  background: #2f8005;
+  background: -webkit-gradient(radial, 50% 50%, 0px, center center, 100%, color-stop(0%, #488062), color-stop(100%, #2f8005));
+  background: -webkit-radial-gradient(0% 0%, circle cover, #488062 0%, #2f8005 100%);
+  background: -webkit-radial-gradient(50% 50%, circle, #488062 0%, #2f8005 100%);
+  background: radial-gradient(circle at 50% 50%, #488062 0%, #2f8005 100%);
 }
 .home-banner header {
   height: 700px;
