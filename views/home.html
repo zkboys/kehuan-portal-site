@@ -4,10 +4,12 @@
 <% block('head').append(`
 `) %>
 <div class="home-page">
-    <% include ./home-banner.html %>
+    <% include ./home-banner2.html %>
 </div>
 <% block('footer').append(`
 <script>
-
+    $(function(){
+        setHeaderNav('home');
+    });
 </script>
 `) %>

@@ -18,9 +18,21 @@ router.get('/', function (req, res) {
     res.render('home', {message: 'I am Index Page!'});
 });
 
+router.get('/product', function (req, res) {
+    res.render('product');
+});
+
+router.get('/plan', function (req, res) {
+    res.render('plan');
+});
 
 router.get('/about', function (req, res) {
     res.render('about', {message: 'I am About Page!'});
+});
+
+
+router.get('/employ', function (req, res) {
+    res.render('employ', {message: 'I am Employ Page!'});
 });
 
 
