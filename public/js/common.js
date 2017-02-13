@@ -38,12 +38,8 @@ function scrollFunc(e) {
 };
 $(function () {
     //小屏幕小展开收起菜单
-    $(".show-menu-icon").on("click", function () {
-        if ($(".nav-menu").hasClass("show-menu")) {
-            $(".nav-menu").removeClass("show-menu");
-        } else {
-            $(".nav-menu").addClass("show-menu");
-        }
+    $('.show-menu-icon').on('click', function () {
+        $('.nav-menu').toggleClass('show-menu');
     });
 
     //给页面绑定滑轮滚动事件
