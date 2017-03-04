@@ -6,7 +6,7 @@
       "node_args": "--harmony",
       "env": {
         "NODE_ENV": "production",
-        "PORT": 3030
+        "PORT": 3077
       },
       "watch": true,
       "log_date_format": "YYYY-MM-DD HH:mm Z"

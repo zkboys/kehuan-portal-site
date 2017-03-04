@@ -116,6 +116,14 @@
             });
     });
 
+    gulp.task('fullPage', function (cb) {
+        gulp.src([paths.source.root + 'fullpage/**'])
+            .pipe(gulp.dest(paths.public.root + '/fullpage'))
+            .on('end', function () {//完成后的回调，继续执行其他任务？
+                cb();
+            });
+    });
+
     gulp.task('watch', function () {
         gulp.watch(paths.source.scripts + 'util/*.js', ['scripts-util']).on('change', function (event) {
             watcherLog(event);
@@ -139,5 +147,5 @@
             paths.public.root + '/**/*'
         ], {force: true}, cb);
     });
-    gulp.task('default', ['img', 'fonts', 'styles', 'scripts', 'scripts-util', 'bootstrap', 'jquery', 'Swiper-3.4.1']);
+    gulp.task('default', ['img', 'fonts', 'styles', 'scripts', 'scripts-util', 'bootstrap', 'jquery', 'Swiper-3.4.1', 'fullPage']);
 })();

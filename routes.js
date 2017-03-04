@@ -35,6 +35,9 @@ router.get('/employ', function (req, res) {
     res.render('employ', {message: 'I am Employ Page!'});
 });
 
+router.get('/full-page', function (req, res) {
+    res.render('full-page');
+});
 
 router.get('/signin', function (req, res) {
     res.render('signin');

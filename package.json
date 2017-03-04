@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env PORT=3001 cross-env NODE_ENV=development nodemon --watch ./ -i ./assets --harmony ./app.js",
+    "build": "gulp",
     "pro": "pm2 start ./process.json",
     "test": "cross-env NODE_ENV=test ./node_modules/mocha/bin/mocha --harmony --reporter spec -r should -r test/env --timeout 10000 test/proxy/user.test.js"
   },

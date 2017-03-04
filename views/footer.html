@@ -2,32 +2,32 @@
     <div class="container">
         <div class="friendship-link">
             <div class="title">友情链接</div>
-            <a href="www.baidu.com">国家知识产权战略网</a>
-            <a href="www.baidu.com">中国知识产权杂志</a>
-            <a href="www.baidu.com">专利复审委员会</a>
-            <a href="www.baidu.com">思博知识产权网</a>
-            <a href="www.baidu.com">中国商标网</a>
-            <a href="www.baidu.com">商标评审委员会</a>
-            <a href="www.baidu.com">中华商标协会</a>
-            <a href="www.baidu.com">国家版权局</a>
-            <a href="www.baidu.com">中国知识产权网</a>
-            <a href="www.baidu.com">国家知识产权局</a>
-            <a href="www.baidu.com">中国保护知识产权网</a>
-            <a href="www.baidu.com">中国知识产权研究网</a>
-            <a href="www.baidu.com">知识产权——人民网</a>
-            <a href="www.baidu.com">中国知识产权资讯网</a>
-            <a href="www.baidu.com">中国科学院知识产权网</a>
-            <a href="www.baidu.com">中国知识产权研究会</a>
-            <a href="www.baidu.com">sooPAT专利搜索</a>
-            <a href="www.baidu.com">专利信息用户组织</a>
-            <a href="www.baidu.com">世界知识产权组织</a>
-            <a href="www.baidu.com">国际商标协会</a>
-            <a href="www.baidu.com">美国专利商标局</a>
+            <a href="http://www.bihutech.com/">壁虎科技</a>
         </div>
         <div class="row">
             <div class="col-sm-6">© 2016——2017 版权所有 丹东科环集成墙板有限公司</div>
-            <div class="col-sm-3">陕ICP备16019285号</div>
-            <div class="col-sm-3">辽宁省丹东市振兴区88号</div>
+            <div class="col-sm-3">京ICP备16006256号-3号</div>
+            <div class="col-sm-3">辽宁省丹东市振兴区</div>
         </div>
     </div>
 </div>
+
+upstream kehuanwall_servers {
+    server 127.0.0.1:3077;
+}
+
+server {
+    listen 80;
+    server_name www.kehuanwall.com kehuanwall.com;
+    # Allow file uploads
+    client_max_body_size 100M;
+    location / {
+        proxy_read_timeout 1800;
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://kehuanwall_servers;
+    }
+}
