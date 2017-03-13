@@ -2,7 +2,6 @@
     <div class="container">
         <div class="friendship-link">
             <div class="title">友情链接</div>
-            <a href="http://www.bihutech.com/">壁虎科技</a>
         </div>
         <div class="row">
             <div class="col-sm-6">© 2016——2017 版权所有 丹东科环集成墙板有限公司</div>
@@ -11,23 +10,3 @@
         </div>
     </div>
 </div>
-
-upstream kehuanwall_servers {
-    server 127.0.0.1:3077;
-}
-
-server {
-    listen 80;
-    server_name www.kehuanwall.com kehuanwall.com;
-    # Allow file uploads
-    client_max_body_size 100M;
-    location / {
-        proxy_read_timeout 1800;
-        proxy_pass_header Server;
-        proxy_set_header Host $http_host;
-        proxy_redirect off;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Scheme $scheme;
-        proxy_pass http://kehuanwall_servers;
-    }
-}
