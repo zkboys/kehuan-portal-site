@@ -4,6 +4,71 @@
 <% block('head').append(`
 `) %>
 <div class="home-page">
+    <div class="home-banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="<%- staticFile('/public/img/banner1.jpg')%>" alt="科环智造 一切均可替代">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%- staticFile('/public/img/banner2.jpg')%>" alt="竹木纤维材质 绿色环保">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%- staticFile('/public/img/banner3.jpg')%>" alt="创新科技 环保材料 当下装修主旋律产品">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%- staticFile('/public/img/banner4.jpg')%>" alt="有氧快装 即装即住">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <section id="profile" class="company-profile">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    公司简介
+                    <div class="line"></div>
+                </h2>
+                <h3>COMPANY PROFILE</h3>
+            </div>
+            <div class="content">
+                <span class="big">科环</span>公司以科技环保为理念，是一家专注于新型装饰材料、家居装饰美容、建筑节能等多个领域，
+                打造丹东首家竹木纤维集成板的自主研发、生产、销售、为一体的高新技术企业
+                公司凭借产品、策略、管理、人才四位一体、复合冲击的经营优势，以做健康家装，行时尚之职为宗旨，秉承诚信、创新、共赢的经营理念，以创造美好的人居环境为目标，2017年度重磅推出环保集成墙面项目，把时尚家装推向了一个全新的时代。科环集成墙面是一个以环保、恒温、健康为主题的多功能集成整体墙面的产品，倡导使用节能、环保、可再生的墙板来设计、实施及应用到更广泛的领域。
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="business">
+        <div class="container">
+            <div class="content">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+                <div class="line line4"></div>
+                <div class="line line5"></div>
+                <div class="line line6"></div>
+                <div class="line line7"></div>
+                <div class="line line8"></div>
+                <div class="text text1">告别传统墙面</div>
+                <div class="text text2">尚生活</div>
+                <div class="text text3">科环墙 尤品质</div>
+                <div class="text text4">家天下</div>
+                <div class="text text5">真正的一站式服务</div>
+                <div class="text text6">无忧的绿色家装</div>
+                <div class="text text7">科环墙板代替传统壁纸、涂料产品，让装修更环保</div>
+                <div class="text text8">科环智造 一切均可替代</div>
+                <div class="text text9">业务核心理念</div>
+            </div>
+        </div>
+    </section>
+
+
     <div style="height:100px"></div>
     <h1>丹东科环集成墙板有限公司 banner展示</h1>
     <h2>
@@ -232,7 +297,26 @@
 <% block('footer').append(`
 <script>
     $(function () {
-        setHeaderNav('home');
+//        setHeaderNav('home');
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 0,
+            paginationClickable: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: true,
+            autoHeight: false, //enable auto height
+        });
+
+        $('.nav-menu a').on('click', function () {
+            var id = $(this).attr('data-id');
+            if(id){
+                $("#" + id).HoverTreeScroll(200, 100);
+            }
+        });
+
     });
+
 </script>
 `) %>

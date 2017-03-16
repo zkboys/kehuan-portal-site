@@ -14,7 +14,7 @@
     background-color: rgba(0, 0, 0, 0);
     &.nav-change-color {
       transition: .6s ease;
-      background-color: rgba(0, 0, 0, .5);
+      background-color: rgba(0, 0, 0, .1);
     }
   }
   //商标样式
@@ -52,6 +52,7 @@
       color: white;
       text-align: center;
       text-decoration: none;
+      cursor: pointer;
     }
     a::before {
       content: '';
@@ -136,6 +137,7 @@
 @media screen and (max-width: 800px) {
   .header-nav {
     height: inherit;
+
     .nav {
       height: inherit;
       background: rgba(0, 0, 0, .7)!important;

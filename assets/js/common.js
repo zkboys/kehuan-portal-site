@@ -21,7 +21,6 @@ function setHeaderNav(activeId, bgColor) {
 function scrollFunc(e) {
     e = e || window.event;
     var scrollTop = $(window).scrollTop();
-
     if (scrollTop > 250) {
         // background-color: rgba(0, 0, 0, .5);
         // $(".nav").addClass('nav-change-color');
@@ -49,5 +48,7 @@ $(function () {
     //滚动滑轮触发scrollFunc方法  //ie 谷歌
     window.onmousewheel = document.onmousewheel;
     document.onmousewheel = scrollFunc;
-    scrollFunc();
+    setTimeout(function(){
+        scrollFunc();
+    }, 500);
 });
