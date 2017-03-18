@@ -1,6 +1,7 @@
 .home-page {
   .title {
     text-align: center;
+    margin-bottom: 20px;
     h2 {
       position: relative;
       display: inline-block;
@@ -27,7 +28,8 @@
   }
   .company-profile {
     padding: 30px 0 100px 0;
-    //background: url('../img/company-profile-bg.png') no-repeat;
+    background: url('../img/profile-bg.png') no-repeat;
+    background-size: cover;
     .content {
       padding-top: 30px;
       font-size: 16px;
@@ -136,13 +138,13 @@
         color: #006a3e;
         font-size: 14px;
       }
-      .text8{
+      .text8 {
         top: 150px;
         left: 0;
         color: #006a3e;
         font-size: 22px;
       }
-      .text9{
+      .text9 {
         top: 112px;
         left: 0;
         color: #006a3e;
@@ -150,4 +152,189 @@
       }
     }
   }
+  .advantage {
+    .box {
+      background-size: cover;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+    }
+    .box > div {
+      width: 6%;
+      height: 100%;
+      float: left;
+      transition: all 500ms;
+    }
+    .block {
+      background: url('../img/advantage-bg.png') no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      .title {
+        position: relative;
+        float: left;
+        height: 100%;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+        transition: all 1s;
+        box-sizing: border-box;
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .text {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        span {
+          display: block;
+          width: 100%;
+          padding: 0 20px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .container {
+        padding: 0;
+      }
+
+      .box {
+        height: 260px;
+      }
+
+      .title {
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .text {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+  .contrast {
+    .content {
+      background: url('../img/contrast-bg.jpg') no-repeat;
+      background-size: cover;
+      .contrast-one-two {
+        padding: 20px 10px;
+        img {
+          float: left;
+          width: auto;
+          height: 385px;
+          border: 2px solid #fff;
+        }
+        .text {
+          float: left;
+          margin-left: -100px;
+          margin-top: 43px;
+          .title {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+          }
+          width: 700px;
+          height: 300px;
+          padding: 30px 50px;
+          background: #fff;
+          p {
+            text-indent: 2em;
+          }
+        }
+      }
+      .contrast-one-two.two {
+        img {
+          float: right;
+        }
+        .text {
+          float: right;
+          margin-left: 0;
+          margin-right: -100px;
+        }
+      }
+      .contrast-title {
+        padding: 15px 0;
+        margin-top: 50px;
+        background: #3a3a3a;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #fff;
+        border-bottom: 0;
+      }
+
+      .contrast-table {
+        margin-bottom: 50px;
+        border: 2px solid #fff;
+        .header {
+          background: #3a3a3a;
+          color: #fff;
+          text-align: center;
+          td {
+            background: #3a3a3a;
+          }
+        }
+        td {
+          padding: 10px;
+          background: #ddd;
+          border: 1px solid #fff;
+        }
+        tr > td:first-child {
+          text-align: center;
+        }
+
+      }
+
+    }
+  }
+  .contact {
+    padding: 30px 0 25px 0;
+    border-bottom: 10px solid #6dad3c;
+    .map {
+      text-align: right;
+      img {
+        height: 200px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      color: #6dad3c;
+      a {
+        color: #6dad3c;
+      }
+      a:visited {
+        color: #6dad3c;
+      }
+      a:hover {
+        color: #6dad3c;
+      }
+      li {
+        padding: 10px 0;
+        .icon {
+          width: 25px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
 }
