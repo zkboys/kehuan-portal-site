@@ -35,7 +35,7 @@ const compress = require('compression');
 
 const RedisStore = require('connect-redis')(session);
 
-require('./models/index'); // 链接数据库，装载models
+// require('./models/index'); // 链接数据库，装载models
 
 // 自定义 权限验证相关中间件
 const auth = require('./middlewares/auth');
